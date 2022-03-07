@@ -1,4 +1,4 @@
-const Biodata = require('../controller/biodataController').biodata;
+const Biodata = require('../controller/biodataController.js').user_game_biodata;
 
 module.exports = {
     async createBiodata(req, res) {
