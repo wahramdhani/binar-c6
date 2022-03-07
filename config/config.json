@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "play16fish",
-    "database": "Challenge-6",
+    "password": "password",
+    "database": "latihan6",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
