@@ -1,4 +1,4 @@
-const Biodata = require('../controller/biodataController.js').user_game_biodata;
+const Biodata = require('../controller/biodataController').user_game_biodata;
 
 module.exports = {
     async createBiodata(req, res) {
@@ -21,6 +21,24 @@ module.exports = {
                 error: [error.message]
             })
         }
+    },
+    biodata(req, res) {
+        return Biodata.findAll()
+        .then(data => {
+            res.status(200).json({
+                status: 'success',
+                data: {
+                    users: data
+                }
+            })
+
+        })
+        .catch(err => {
+            res.status(400).json({
+                status: 'failed',
+                error: [error.message]
+            })
+        })
     },
     async updateBiodata(req, res) {
         try {
